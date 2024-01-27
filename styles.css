@@ -1,1 +1,26 @@
 /*  your css code here. If applicable */
+
+#container {
+    margin: 20px;
+    position: relative;
+}
+
+#container::before,
+#container::after {
+    content: "Inserted Content";
+    color: #f00;
+    font-size: 20px;
+    position: absolute;
+}
+
+#container::before {
+    content: "Before Element" attr(data-content);
+    top: 0;
+    left: 0;
+}
+p{margin-left:150px}
+#container::after {
+    content: "After Element" attr(data-content);
+    bottom: 0;
+    right: 0;
+}
